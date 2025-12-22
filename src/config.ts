@@ -1,9 +1,9 @@
 export const SITE = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
-  author: "Sat Naing",
-  profile: "https://satnaing.dev/",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
+  website: "https://vpankaj.com/", // replace this with your deployed domain
+  author: "Vetcha Pankaj Nath",
+  profile: "https://vpankaj.com/",
+  desc: "Personal portfolio and blog of Vetcha Pankaj Nath, a Full Stack Developer specializing in Python and C++.",
+  title: "V Pankaj",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -20,4 +20,9 @@ export const SITE = {
   dir: "ltr", // "rtl" | "auto"
   lang: "en", // html lang code. Set this empty and default will be "en"
   timezone: "Asia/Bangkok", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+} as const;
+
+export const LOCALE = {
+  lang: "en",
+  langTag: ["en-EN"],
 } as const;
