@@ -12,6 +12,7 @@ html[data-theme="light"] {
   --border: #ece9e9;
 }
 
+/* Dark Theme */
 html[data-theme="dark"] {
   --background: #212737;
   --foreground: #eaedf3;
@@ -34,20 +35,25 @@ html[data-theme="dark"] {
     scrollbar-width: auto;
     scrollbar-color: var(--color-muted) transparent;
   }
+
   html {
     @apply overflow-y-scroll scroll-smooth;
   }
+
   body {
     @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
   }
+
   a,
   button {
     @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
   }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+
   section,
   footer {
     @apply mx-auto max-w-app px-4;
