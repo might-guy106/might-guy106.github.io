@@ -14,7 +14,7 @@ html[data-theme="light"] {
 
 /* Dark Theme */
 html[data-theme="dark"] {
-  --background: #212737;
+  --background: #0D1117;
   --foreground: #eaedf3;
   --accent: #ff6b01;
   --muted: #343f60;
@@ -27,6 +27,9 @@ html[data-theme="dark"] {
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-border: var(--border);
+
+  /* Font Configuration */
+  /* --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif; */
 }
 
 @layer base {
@@ -41,7 +44,7 @@ html[data-theme="dark"] {
   }
 
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-background font-sans text-foreground selection:bg-accent/75 selection:text-background;
   }
 
   a,
