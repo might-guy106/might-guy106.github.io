@@ -3,7 +3,7 @@ author: Pankaj Nath
 pubDatetime: 2025-12-24T22:51:05.000+05:30
 modDatetime: 
 title: My Journey Setting Up a Personal Portfolio with AstroPaper
-featured: false
+featured: true
 draft: false
 tags:
   - portfolio
