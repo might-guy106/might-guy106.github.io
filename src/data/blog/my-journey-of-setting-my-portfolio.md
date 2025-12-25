@@ -77,7 +77,7 @@ I also added a **CNAME record** for the `www` subdomain to alias it to my root d
 | :--- | :--- | :--- | :--- |
 | CNAME | www | vpankaj.com | 30 min |
 
-> **Note:** The multiple A records ensure redundancy. GitHub uses the `Host` header in incoming requests to route traffic to the correct repository, even though everyone points to the same IP addresses. [Read more about GitHub Pages DNS configuration](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain).
+> **Note:** The multiple A records ensure redundancy. GitHub uses the `Host` header in incoming requests to route traffic to the correct repository, even though everyone points to the same IP addresses. [Read more about GitHub Pages DNS configuration](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ## 5. Setting up the Astro Project
 
@@ -185,7 +185,7 @@ Since we are using a custom domain, we need to tell GitHub Pages about it. Creat
 echo "vpankaj.com" > public/CNAME
 ```
 
-When Astro builds your site, it copies files from `public/` directly to the `dist/` folder. This ensures the `CNAME` file exists in the deployment, allowing GitHub to map `vpankaj.com` to your site correctly.
+When Astro builds your site, it copies files from `public/` directly to the `dist/` folder. This ensures the `CNAME` file exists in the deployment, allowing GitHub to map `vpankaj.com` to your site correctly. 
 
 ## 7. Final Configuration
 
@@ -194,7 +194,5 @@ When Astro builds your site, it copies files from `public/` directly to the `dis
 3.  Under **Build and deployment**, select **GitHub Actions** as the source.
 4.  Under **Custom domain**, enter `vpankaj.com` and save.
 5.  Wait for the DNS check to pass, then check the box for **Enforce HTTPS**.
-
-Go through [this](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) to know more
 
 And that's it! Now, every time I push changes to the `main` branch, my GitHub Action builds the Astro site and deploys it live to my custom domain.
