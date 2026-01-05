@@ -14,7 +14,7 @@ description: A step-by-step guide on how I built my personal portfolio using Ast
 
 Setting up my own personal portfolio had been on my TODO list for a long time. In this post, I'll walk you through my journey of building and hosting my portfolio, from buying a domain to automated deployments with GitHub Actions. hopefully this feels like a walkthrough from a friend rather than a tutorial page.
 
-## Table of Contents
+<!-- ## Table of Contents -->
 
 ## 1. Registering the Custom Domain
 

@@ -1,0 +1,127 @@
+---
+import type { MarkdownHeading } from "astro";
+
+export interface Props {
+  headings: MarkdownHeading[];
+}
+
+interface TocItem extends MarkdownHeading {
+  children: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+
+// Filter relevant headings
+const relevantHeadings = headings.filter(
+  heading => heading.depth > 1 && heading.depth < 4
+);
+
+// Group headings into a nested structure
+const toc: TocItem[] = [];
+
+relevantHeadings.forEach(heading => {
+  if (heading.depth === 2) {
+    toc.push({ ...heading, children: [] });
+  } else if (heading.depth === 3) {
+    // Determine which H2 this H3 belongs to
+    // We assume the H3 belongs to the last H2 found so far
+    if (toc.length > 0) {
+      const lastH2 = toc[toc.length - 1];
+      lastH2.children.push(heading);
+    } else {
+      // Orphaned H3 (H3 before any H2), treating as top level for now or ignoring
+      // For this specific requirement, let's just add it as a top level item to avoid loss,
+      // though typically H3 shouldn't be top level in this component's logic.
+      // But based on user request "only show top level headings... on clicking show sublevel",
+      // we'll strictly treat depth 2 as parents.
+    }
+  }
+});
+---
+
+<nav class="toc">
+  <h2 class="mb-4 text-lg font-bold text-foreground">On this page</h2>
+  <ul class="text-xs leading-6 text-foreground">
+    {
+      toc.map(heading => (
+        <li class="my-2">
+          <a
+            href={`#${heading.slug}`}
+            class={`toc-link block transition-colors duration-200 hover:text-accent ${heading.children.length > 0 ? "has-children" : ""}`}
+            data-target={heading.slug}
+          >
+            {heading.text}
+          </a>
+          {heading.children.length > 0 && (
+            <ul
+              id={`toc-children-${heading.slug}`}
+              class="sub-toc ml-2 hidden border-l border-border pl-2"
+            >
+              {heading.children.map(child => (
+                <li class="my-1">
+                  <a
+                    href={`#${child.slug}`}
+                    class="text-muted-foreground block transition-colors duration-200 hover:text-accent"
+                  >
+                    {child.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<script>
+  function setupToc() {
+    const filters = document.querySelectorAll(".toc-link.has-children");
+
+    filters.forEach(link => {
+      link.addEventListener("click", e => {
+        // e.preventDefault(); // Don't prevent default, let it jump
+        const targetSlug = (link as HTMLElement).dataset.target;
+        const targetSubmenu = document.getElementById(
+          `toc-children-${targetSlug}`
+        );
+        const allSubmenus = document.querySelectorAll(".sub-toc");
+
+        if (targetSubmenu) {
+          // If already visible, do nothing (or toggle? User said "on clicking them you should show", usually implies toggle or open)
+          // Let's implement accordion style: close others, open this one.
+          const isHidden = targetSubmenu.classList.contains("hidden");
+
+          if (isHidden) {
+            // Close all others
+            allSubmenus.forEach(el => el.classList.add("hidden"));
+            // Open this one
+            targetSubmenu.classList.remove("hidden");
+          } else {
+            // If allow collapsing self:
+            // targetSubmenu.classList.add("hidden");
+            // But often in documentation, clicking again just jumps again.
+            // Let's leave it open if clicked again, or toggle?
+            // "on clicking them you should show sublevel headings" -> implies ensure shown.
+            // Let's just ensure it is shown.
+            targetSubmenu.classList.remove("hidden");
+          }
+        }
+      });
+    });
+  }
+
+  // Run on load and after Astro swaps
+  setupToc();
+  document.addEventListener("astro:after-swap", setupToc);
+</script>
+
+<style>
+  .toc {
+    /* Sticky styles are external */
+  }
+  .sub-toc {
+    /* Animation could be added here if we replaced hidden class with data-attributes */
+  }
+</style>
