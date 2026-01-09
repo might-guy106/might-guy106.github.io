@@ -2,12 +2,13 @@
 author: Pankaj Nath
 pubDatetime: 2026-01-09T13:26:02.000+05:30
 modDatetime: 
-title: IITK VPN Architecture
-featured: false
-draft: true
+title: IITK VPN Setup on Arch Linux
+featured: true
+draft: false
 tags:
-  - 
-description: IITK VPN setup on arch linux.
+  - linux
+  - vpn
+description: Guide to setup IITK VPN on Arch Linux.
 ---
 
 
