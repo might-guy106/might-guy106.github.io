@@ -85,9 +85,7 @@ const nextPost =
 
 <Layout {...layoutProps}>
   <Header />
-  <div
-    class="mx-auto grid w-full max-w-app grid-cols-1 gap-8 px-4 pb-12 lg:grid-cols-[1fr_200px]"
-  >
+  <div class="mx-auto w-full max-w-app px-4 pb-12">
     <main
       id="main-content"
       class:list={[{ "mt-8": !SITE.showBackButton }]}
@@ -163,13 +161,10 @@ const nextPost =
       </div>
     </main>
   </div>
-  <aside class="relative hidden lg:block">
-    <div class="fixed top-20 right-10 mt-8">
+  <aside class="hidden lg:block">
+    <div class="fixed top-32 left-[calc(50%+34rem)] h-full w-60">
       <TableOfContents headings={headings} />
     </div>
-    <!-- <div class="fixed right-20 bottom-20">
-      <BackToTopButton />
-    </div> -->
   </aside>
   <!-- <Footer /> -->
 </Layout>
