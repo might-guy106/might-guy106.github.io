@@ -35,4 +35,4 @@ sudo openfortivpn gateway.iitk.ac.in:443 -u YOUR_USERNAME
 
 ## 3. Disconnect
 To stop the VPN, go to the terminal window where it is running and press: **Ctrl + C**
-*Note: This cleanly closes the tunnel and restores your normal internet connection.*
+Note: This cleanly closes the tunnel and restores your normal internet connection.*
