@@ -8,7 +8,7 @@ draft: false
 tags:
     - Birthday
     - Automation
-description: Never Miss a Birthday Again: Building a Lightweight WhatsApp Bot with Node.js & Systemd
+description: Never Miss a Birthday Again, Building a Lightweight WhatsApp Bot with Node.js & Systemd
 ---
 
 I have a recurring problem: I keep forgetting birthdays (most of us have this issue i guess). I wanted a solution that was automated and free (obviously i am not going pay for this). 
