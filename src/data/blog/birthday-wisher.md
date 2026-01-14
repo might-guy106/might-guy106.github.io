@@ -3,7 +3,7 @@ author: Pankaj
 pubDatetime: 2026-01-13T18:07:46.000+05:30
 modDatetime: 
 title: Birthday Wisher
-featured: false
+featured: true
 draft: false
 tags:
     - Birthday

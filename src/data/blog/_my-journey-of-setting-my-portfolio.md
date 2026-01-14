@@ -3,7 +3,7 @@ author: Pankaj Nath
 pubDatetime: 2025-12-24T22:51:05.000+05:30
 modDatetime: 
 title: My Journey of Setting Up Personal Portfolio
-featured: true
+featured: false
 draft: false
 tags:
   - portfolio
