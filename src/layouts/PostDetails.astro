@@ -17,8 +17,15 @@ import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
 
 export interface Props {
-  post: CollectionEntry<"blog">;
-  posts: CollectionEntry<"blog">[];
+  post:
+    | CollectionEntry<"blog">
+    | CollectionEntry<"notes">
+    | CollectionEntry<"recipes">;
+  posts: (
+    | CollectionEntry<"blog">
+    | CollectionEntry<"notes">
+    | CollectionEntry<"recipes">
+  )[];
 }
 
 const { post, posts } = Astro.props;
