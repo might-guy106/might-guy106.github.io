@@ -151,6 +151,7 @@ Reload systemd and enable the timer:
 ```bash
 systemctl --user daemon-reload
 systemctl --user enable --now birthday-bot.timer
+```
 
 Confirm the next run time:
 
@@ -187,11 +188,6 @@ Verify it with:
 
 ```bash
 loginctl show-user $USER --property=Linger
-
-Expected output:
-
-```ini
-Linger=yes
 ```
 
 If you see below output then you can be happy 😁.
