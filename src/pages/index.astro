@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
@@ -8,9 +9,8 @@ import LinkButton from "@/components/LinkButton.astro";
 import Card from "@/components/Card.astro";
 import Hr from "@/components/Hr.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
-import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
-import IconProfile from "@/assets/icons/IconProfile.svg";
+import passport from "@/assets/images/Passport.jpg";
 import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 
@@ -27,10 +27,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     <section id="hero" class="pt-8 pb-12">
       <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
         <div class="flex-shrink-0">
-          <img
-            src="src/assets/images/Passport.jpg"
-            class="h-auto w-64 rounded-lg"
-          />
+          <Image src={passport} alt="Passport" class="h-auto w-64 rounded-lg" />
         </div>
         <div class="flex-1">
           <h1 class="mb-4 text-4xl font-bold sm:text-5xl">Hey, I am Pankaj</h1>
