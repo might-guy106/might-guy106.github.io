@@ -3,35 +3,53 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+## Hey, I am Pankaj
 
-![Astro Paper](public/astropaper-og.jpg)
+I'm a final year undergraduate at [IIT Kanpur](https://www.iitk.ac.in/), graduating with a B.Tech in Computer Science and Engineering. I'll be joining [InMobi](https://www.inmobi.com/) as an SDE-1 soon, where I'm excited to build scalable systems and work on challenging problems in ad-tech.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+## What I Do
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+I love building interesting systems and projects that solve real problems. My work spans across:
 
-## Features
+### Systems & Distributed Computing
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+- Built privacy-preserving protocols for **Tango-Sum** and **DORAM** that achieved **35% performance improvements** with **3.08x updates** and **23.5x queries** improvement for million-node segment trees
+- Optimized secret-sharing algorithms for **DPRAM** accesses to enable faster queries on encrypted data
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+### AI & Machine Learning
 
-and so much more.
+- Developed **confidence calibration** methods for Telugu Handwriting Recognition achieving **5.51% CER** improvement using CRNN + BiLSTM + CTC architectures
+- Built conversational AI interfaces with **ASR**, **in-house LLMs**, and **TTS** components using **WebSockets** for real-time communication
 
-## Show your support
+### Full-Stack Development
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+- Architected and built a **campus ride-sharing platform** with **React.js** frontend and **Express.js** backend, enabling coordination for **500+ journeys** with **real-time chat using WebSockets**
+- Created a **Flask app** for HWR with character-level visualization supporting **multi-language estimation** and **aggregation methods**
+- Built a **Puppeteer** automation to measure **SSE streaming times** across different chatbot providers
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+## Academic Excellence
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+- Awarded **Academic Excellence Award** (three times) for being in the **Top 10%** at IIT Kanpur with a **CGPA of 9.1/10**
+- Secured **All India Rank 488** in **JEE Mains 2022** among **1.1 million applicants**
+- Achieved a rank of **80** in **TS EAMCET** among **1.7 lac applicants**
 
-Kyay zuu! 🙏🏼
+## Research & Contributions
+
+I've contributed to research in privacy-preserving algorithms, ML model confidence calibration, and distributed systems. My work has been recognized through:
+
+- Full-term Intern at [Kruti AI](https://www.kruti.ai/) - contributed to pre-placement offer
+- Research internships under Prof. Adithya Vadapalli and Prof. Sujaya Datta at IIT Kanpur
+
+## Beyond Code
+
+When I'm not building systems or exploring new tech:
+
+- I'm passionate about **cooking vegetarian food** and experimenting with new recipes
+- I share my technical learnings through blogs and **engineering videos**
+- I enjoy diving deep into **databases, distributed systems, and algorithms**
+
+## Let's Connect
+
+I'm always excited to discuss interesting technical problems, collaborate on projects, or just chat about systems, ML, or great vegetarian food!
+
+Find me on [GitHub](https://github.com/vpankaj), [LinkedIn](https://linkedin.com/in/vpankaj), or reach out via [email](mailto:vpankaj@example.com).

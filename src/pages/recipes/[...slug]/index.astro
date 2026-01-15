@@ -1,0 +1,27 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PostDetails from "@/layouts/PostDetails.astro";
+import getSortedPosts from "@/utils/getSortedPosts";
+import { getPath } from "@/utils/getPath";
+
+export interface Props {
+  post: CollectionEntry<"recipes">;
+}
+
+export async function getStaticPaths() {
+  const recipes = await getCollection("recipes", ({ data }) => !data.draft);
+  const recipeResult = recipes.map(recipe => ({
+    params: { slug: getPath(recipe.id, recipe.filePath, false) },
+    props: { post: recipe },
+  }));
+
+  return recipeResult;
+}
+
+const { post } = Astro.props;
+
+const recipes = await getCollection("recipes");
+const sortedPosts = getSortedPosts(recipes);
+---
+
+<PostDetails post={post} posts={sortedPosts} />

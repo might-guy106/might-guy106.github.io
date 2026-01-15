@@ -64,7 +64,7 @@ html[data-theme="dark"] {
 }
 
 @utility max-w-app {
-  @apply max-w-[52rem];
+  @apply max-w-7xl;
 }
 
 .active-nav {

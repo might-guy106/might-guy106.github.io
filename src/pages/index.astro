@@ -10,6 +10,7 @@ import Hr from "@/components/Hr.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import IconProfile from "@/assets/icons/IconProfile.svg";
 import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 
@@ -23,49 +24,80 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 <Layout>
   <Header />
   <main id="main-content" data-layout="index">
-    <section id="hero" class="pb-6">
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Pankaj Nath
-      </h1>
-      <p>
-        Welcome, I'm Pankaj, a software engineer with a passion for building
-        innovative projects and user-friendly applications.
-      </p>
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
+    <section id="hero" class="pt-8 pb-12">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
+        <div class="flex-shrink-0">
+          <img
+            src="src/assets/images/Passport.jpg"
+            class="h-auto w-64 rounded-lg"
+          />
+        </div>
+        <div class="flex-1">
+          <h1 class="mb-4 text-4xl font-bold sm:text-5xl">Hey, I am Pankaj</h1>
+          <p class="mb-4 text-lg leading-relaxed">
+            <span class="text-accent italic">i love cooking and coding</span>
+          </p>
+          <p class="mb-4 leading-relaxed">
+            I'm a final year undergraduate at <a
+              href="https://www.iitk.ac.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-accent hover:underline">IIT Kanpur</a
+            >, graduating with a B.Tech in Computer Science and Engineering.
+            I'll be joining <a
+              href="https://www.inmobi.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-accent hover:underline">InMobi</a
+            > as an SDE-1 soon.
+          </p>
+          <p class="mb-4 leading-relaxed">
+            I love building interesting systems and projects.
+            <!-- I've worked on
+            everything from AI chatbots with <span class="font-semibold"
+              >React, Next.js, and WebSockets</span
+            >, to confidence calibration for <span class="font-semibold"
+              >Telugu HWR</span
+            >, to privacy-preserving protocols for <span class="font-semibold"
+              >Tango-Sum and DORAM</span
+            > that achieved <span class="font-semibold"
+              >35% performance improvements</span
+            >. -->
+            <!-- I also dive deep into engineering details and share my learnings
+            through my socials and no-fluff engineering videos on <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-accent hover:underline">YouTube
+              </a>. -->
+          </p>
+          <div class=""></div>
+          {
+            // only display if at least one social link is enabled
+            SOCIALS.length > 0 && (
+              <div class="mt-6 flex flex-wrap items-center gap-4">
+                <Socials />
+              </div>
+            )
+          }
+        </div>
+      </div>
     </section>
 
     <Hr />
 
     {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured" class="pt-4 pb-6">
-            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
-            <ul>
-              {featuredPosts.map(data => (
-                <Card variant="h3" {...data} />
-              ))}
-            </ul>
-          </section>
-          {recentPosts.length > 0 && <Hr />}
-        </>
-      )
-    }
-
-    {
-      recentPosts.length > 0 && (
+      sortedPosts.length > 0 && (
         <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
+          <div class="mb-4 flex items-center justify-between">
+            <h2 class="text-2xl font-semibold">Recent blog posts</h2>
+            <a href="/posts/" class="text-accent hover:underline">
+              Full archive →
+            </a>
+          </div>
+          <p class="mb-6 text-foreground/80">Things I have written recently.</p>
           <ul>
-            {recentPosts.map(
+            {sortedPosts.map(
               (data, index) =>
                 index < SITE.postPerIndex && <Card variant="h3" {...data} />
             )}

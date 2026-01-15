@@ -18,19 +18,23 @@ const headerProps = {
 };
 ---
 
-<li class="my-6">
-  <a
-    href={getPath(id, filePath)}
-    class="inline-block text-lg font-medium text-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
-  >
-    {
-      variant === "h2" ? (
-        <h2 {...headerProps}>{title}</h2>
-      ) : (
-        <h3 {...headerProps}>{title}</h3>
-      )
-    }
-  </a>
-  <Datetime {pubDatetime} {modDatetime} {timezone} />
-  <p>{description}</p>
+<li class="my-8">
+  <div class="flex flex-col gap-2">
+    <div class="flex items-baseline gap-3">
+      <Datetime {pubDatetime} {modDatetime} {timezone} />
+    </div>
+    <a
+      href={getPath(id, filePath)}
+      class="group block"
+    >
+      {
+        variant === "h2" ? (
+          <h2 class="text-xl font-semibold text-accent group-hover:underline sm:text-2xl">{title}</h2>
+        ) : (
+          <h3 class="text-xl font-semibold text-accent group-hover:underline sm:text-2xl">{title}</h3>
+        )
+      }
+    </a>
+    <p class="text-foreground/80">{description}</p>
+  </div>
 </li>
