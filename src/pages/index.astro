@@ -15,8 +15,10 @@ import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 
 const posts = await getCollection("blog");
+const notes = await getCollection("notes");
 
 const sortedPosts = getSortedPosts(posts);
+const sortedNotes = getSortedPosts(notes);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 ---
@@ -83,31 +85,45 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
     <Hr />
 
-    {
-      sortedPosts.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
-          <div class="mb-4 flex items-center justify-between">
-            <h2 class="text-2xl font-semibold">Recent blog posts</h2>
-            <a href="/posts/" class="text-accent hover:underline">
-              Full archive →
-            </a>
+    <div class="mx-auto grid max-w-app grid-cols-1 gap-6 px-4 md:grid-cols-2">
+      {
+        sortedPosts.length > 0 && (
+          <div id="recent-posts" class="pt-12 pb-6">
+            <div class="mb-2 flex items-center justify-between">
+              <h2 class="text-xl font-semibold">Recent blog posts</h2>
+              <LinkButton href="/posts/">
+                All Posts
+                <IconArrowRight class="inline-block rtl:-rotate-180" />
+              </LinkButton>
+            </div>
+            <ul>
+              {sortedPosts.map(
+                (data, index) =>
+                  index < SITE.postPerIndex && <Card variant="h4" {...data} />
+              )}
+            </ul>
           </div>
-          <p class="mb-6 text-foreground/80">Things I have written recently.</p>
-          <ul>
-            {sortedPosts.map(
-              (data, index) =>
-                index < SITE.postPerIndex && <Card variant="h3" {...data} />
-            )}
-          </ul>
-        </section>
-      )
-    }
-
-    <div class="my-8 text-center">
-      <LinkButton href="/posts/">
-        All Posts
-        <IconArrowRight class="inline-block rtl:-rotate-180" />
-      </LinkButton>
+        )
+      }
+      {
+        sortedNotes.length > 0 && (
+          <div id="recent-notes" class="pt-12 pb-6">
+            <div class="mb-2 flex items-center justify-between">
+              <h2 class="text-xl font-semibold">Recent notes</h2>
+              <LinkButton href="/notes/">
+                All Notes
+                <IconArrowRight class="inline-block rtl:-rotate-180" />
+              </LinkButton>
+            </div>
+            <ul>
+              {sortedNotes.map(
+                (data, index) =>
+                  index < SITE.postPerIndex && <Card variant="h4" {...data} />
+              )}
+            </ul>
+          </div>
+        )
+      }
     </div>
   </main>
   <!-- <Footer /> -->

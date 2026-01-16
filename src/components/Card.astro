@@ -5,7 +5,7 @@ import { getPath } from "@/utils/getPath";
 import Datetime from "./Datetime.astro";
 
 export interface Props {
-  variant?: "h2" | "h3";
+  variant?: "h2" | "h3" | "h4";
   data: (
     | CollectionEntry<"blog">
     | CollectionEntry<"notes">
@@ -25,20 +25,25 @@ const headerProps = {
 };
 ---
 
-<li class="my-8">
-  <div class="flex flex-col gap-2">
-    <div class="flex items-baseline gap-3">
+<li class="my-4">
+  <div class="flex flex-col gap-1">
+    <!-- <div class="flex items-baseline gap-3">
       <Datetime {pubDatetime} {modDatetime} {timezone} />
-    </div>
-    <a
-      href={getPath(id, filePath)}
-      class="group block"
-    >
+    </div> -->
+    <a href={getPath(id, filePath)} class="group block">
       {
         variant === "h2" ? (
-          <h2 class="text-xl font-semibold text-accent group-hover:underline sm:text-2xl">{title}</h2>
+          <h2 class="text-xl font-semibold text-accent group-hover:underline sm:text-xl">
+            {title}
+          </h2>
+        ) : variant === "h3" ? (
+          <h3 class="text-xl font-semibold text-accent group-hover:underline sm:text-xl">
+            {title}
+          </h3>
         ) : (
-          <h3 class="text-xl font-semibold text-accent group-hover:underline sm:text-2xl">{title}</h3>
+          <h4 class="text-lg font-semibold text-accent group-hover:underline sm:text-lg">
+            {title}
+          </h4>
         )
       }
     </a>
