@@ -71,7 +71,7 @@
     }
 
     .astro-code code {
-      @apply flex-[1_0_100%] bg-inherit p-0;
+      @apply bg-inherit p-0;
     }
 
     blockquote {
@@ -88,12 +88,17 @@
 
     pre {
       @apply focus-visible:border-transparent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-dashed;
+      max-width: 100%;
+      overflow-x: auto;
     }
   }
 
   /* ===== Code Blocks & Syntax Highlighting ===== */
   .astro-code {
-    @apply flex border rounded-none bg-(--shiki-light-bg) text-(--shiki-light) outline-border [&_span]:text-(--shiki-light);
+    @apply overflow-x-auto rounded-none border bg-(--shiki-light-bg) text-(--shiki-light) outline-border [&_span]:text-(--shiki-light);
+    /* Better scrolling on mobile */
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
   }
 
   html[data-theme="dark"] .astro-code {
