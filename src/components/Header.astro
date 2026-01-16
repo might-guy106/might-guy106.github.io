@@ -6,9 +6,9 @@ import IconSearch from "@/assets/icons/IconSearch.svg";
 import IconArchive from "@/assets/icons/IconArchive.svg";
 import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
 import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
-import IconHome from "@/assets/icons/IconHome.svg";
-import IconProfile from "@/assets/icons/IconProfile.svg";
 import LinkButton from "./LinkButton.astro";
+import { Image } from "astro:assets";
+import logo from "@/assets/images/logo.png";
 import { SITE } from "@/config";
 
 const { pathname } = Astro.url;
@@ -45,7 +45,7 @@ const isActive = (path: string) => {
         href="/"
         class="absolute text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
       >
-        <IconProfile class="h-12 w-12" />
+        <Image src={logo} alt="Logo" />
       </a>
       <nav
         id="nav-menu"
