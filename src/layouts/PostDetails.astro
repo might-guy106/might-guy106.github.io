@@ -92,11 +92,11 @@ const nextPost =
 
 <Layout {...layoutProps}>
   <Header />
-  <div class="mx-auto max-w-app">
-    <div class="mr-auto flex w-full gap-32 pb-12">
+  <div class="mx-auto max-w-app pl-4">
+    <div class="flex w-full justify-between gap-32 pb-12">
       <main
         id="main-content"
-        class:list={["max-w-3xl flex-1", { "mt-8": !SITE.showBackButton }]}
+        class:list={["w-full max-w-3xl", { "mt-8": !SITE.showBackButton }]}
         data-pagefind-body
       >
         <BackButton />
