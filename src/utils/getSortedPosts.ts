@@ -1,9 +1,9 @@
 import type { CollectionEntry } from "astro:content";
 import postFilter from "./postFilter";
 
-const getSortedPosts = <T extends "blog" | "notes" | "recipes">(
-  posts: CollectionEntry<T>[]
-): CollectionEntry<T>[] => {
+const getSortedPosts = (
+  posts: CollectionEntry<"blog" | "notes" | "recipes">[]
+) => {
   return posts
     .filter(postFilter)
     .sort(
