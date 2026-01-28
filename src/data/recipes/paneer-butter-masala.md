@@ -11,8 +11,6 @@ difficulty: "medium"
 cuisine: "Indian"
 ---
 
-# Paneer Butter Masala
-
 A classic North Indian vegetarian dish that's rich, creamy, and absolutely delicious. Perfect with naan or rice!
 
 ## Ingredients

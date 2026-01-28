@@ -47,8 +47,9 @@ relevantHeadings.forEach(heading => {
         <li class="my-2">
           <a
             href={`#${heading.slug}`}
-            class={`toc-link block transition-colors duration-200 hover:text-accent ${heading.children.length > 0 ? "has-children" : ""}`}
+            class={`toc-link block truncate transition-colors duration-200 hover:text-accent ${heading.children.length > 0 ? "has-children" : ""}`}
             data-target={heading.slug}
+            title={heading.text}
           >
             {heading.text}
           </a>
@@ -61,7 +62,8 @@ relevantHeadings.forEach(heading => {
                 <li class="my-1">
                   <a
                     href={`#${child.slug}`}
-                    class="text-muted-foreground block transition-colors duration-200 hover:text-accent"
+                    class="text-muted-foreground block truncate transition-colors duration-200 hover:text-accent"
+                    title={child.text}
                   >
                     {child.text}
                   </a>
