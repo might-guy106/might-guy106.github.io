@@ -4,6 +4,7 @@ author: Vetcha Pankaj Nath
 pubDatetime: 2025-01-15T12:00:00Z
 description: A rich and creamy vegetarian Indian curry made with paneer in a tomato-based gravy with butter and cream.
 tags: ["vegetarian", "indian", "main-course"]
+draft: true
 prepTime: "20 mins"
 cookTime: "30 mins"
 servings: 4

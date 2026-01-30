@@ -20,7 +20,10 @@ const { page } = Astro.props;
 
 <Layout title={`Notes | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="Notes" pageDesc="Technical notes on computer science, AI, and software systems.">
+  <Main
+    pageTitle="Notes"
+    pageDesc="Technical notes that i want to save and share which are mostrly related to computer science, software systems and maybe AI"
+  >
     <ul>
       {page.data.map(data => <Card {...data} />)}
     </ul>

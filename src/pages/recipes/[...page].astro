@@ -20,7 +20,7 @@ const { page } = Astro.props;
 
 <Layout title={`Recipes | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="Recipes" pageDesc="Delicious vegetarian recipes I love to cook and share.">
+  <Main pageTitle="Recipes" pageDesc="My collection of vegetarian recipes">
     <ul>
       {page.data.map(data => <Card {...data} />)}
     </ul>
