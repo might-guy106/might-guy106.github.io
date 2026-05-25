@@ -15,6 +15,7 @@
 :root,
 html[data-theme="light"] {
   --background: #fdfdfd;
+  --surface: #fdfdfd;
   --foreground: #282728;
   --accent: #006cac;
   --muted: #e6e6e6;
@@ -23,15 +24,17 @@ html[data-theme="light"] {
 
 /* Dark Theme */
 html[data-theme="dark"] {
-  --background: #0d1117;
+  --background: #26292b;
+  --surface: #181a1b;
   --foreground: #eaedf3;
-  --accent: #ff6b01;
+  --accent: #54bfff;
   --muted: #343f60;
-  --border: #ab4b08;
+  --border: #2f3335;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-muted: var(--muted);
