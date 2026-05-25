@@ -24,30 +24,36 @@ const sortedNotes = getSortedPosts(notes);
   <Header />
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-8 pb-12">
-      <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
+      <div
+        class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between sm:gap-8"
+      >
         <div class="flex-1">
           <h1 class="mb-4 text-4xl font-bold sm:text-5xl">Pankaj</h1>
           <p class="mb-4 text-lg leading-relaxed">
-            <span class="text-accent italic">He likes cooking and coding</span>
+            <span class="text-accent italic"
+              >He likes cooking, coding, and building solid systems.</span
+            >
           </p>
-          <p class="mb-4 leading-relaxed">
-            I'm a final year undergraduate at <a
-              href="https://www.iitk.ac.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-accent hover:underline">IIT Kanpur</a
-            >, graduating with a B.Tech in Computer Science and Engineering.
-            I'll be joining <a
-              href="https://www.inmobi.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-accent hover:underline">InMobi</a
-            > as an SDE-1 soon.
-          </p>
-          <p class="mb-4 leading-relaxed">
-            I love building interesting systems and projects.
-          </p>
-          <div class=""></div>
+          <ul class="mb-4 list-disc space-y-2 pl-5 leading-relaxed">
+            <li>
+              Completed undergrad in Computer Science at <a
+                href="https://www.iitk.ac.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-accent hover:underline">IIT Kanpur</a
+              >
+            </li>
+            <li>
+              Joining <a
+                href="https://www.inmobi.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-accent hover:underline">InMobi</a
+              > as SDE I
+            </li>
+            <li>Interested in building and perfecting reliable systems</li>
+            <li>Currently in a high-speed learning phase</li>
+          </ul>
           {
             // only display if at least one social link is enabled
             SOCIALS.length > 0 && (
