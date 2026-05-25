@@ -1,5 +1,4 @@
 ---
-import Hr from "./Hr.astro";
 import IconX from "@/assets/icons/IconX.svg";
 import IconMoon from "@/assets/icons/IconMoon.svg";
 import IconSearch from "@/assets/icons/IconSearch.svg";
@@ -27,7 +26,7 @@ const isActive = (path: string) => {
 
 <header
   id="site-header"
-  class="sticky top-0 z-50 transition-transform duration-300 ease-out will-change-transform"
+  class="sticky top-0 z-50 w-full border-b border-border bg-background transition-transform duration-300 ease-out will-change-transform"
 >
   <div
     id="nav-container"
@@ -35,7 +34,7 @@ const isActive = (path: string) => {
   >
     <div
       id="top-nav-wrap"
-      class="relative flex w-full items-baseline justify-between bg-background p-6 sm:items-center sm:py-2"
+      class="relative flex w-full items-baseline justify-between p-6 sm:items-center sm:py-2"
     >
       <a
         href="/"
@@ -148,7 +147,6 @@ const isActive = (path: string) => {
       </nav>
     </div>
   </div>
-  <Hr />
 </header>
 
 <script>
