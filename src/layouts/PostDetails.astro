@@ -94,12 +94,12 @@ const nextPost =
 <Layout {...layoutProps}>
   <Header />
   <div class="bg-background py-2">
-    <div class="mx-auto max-w-app px-4">
-      <div class="flex justify-between gap-10 pb-12">
+    <div class="mx-auto max-w-app">
+      <div class="relative mx-auto max-w-5xl">
         <main
           id="main-content"
           class:list={[
-            "w-full max-w-4xl min-w-0 rounded-xl border border-border bg-surface p-6 sm:p-10",
+            "w-full rounded-xl border border-border bg-surface p-6 sm:px-16 sm:py-10",
             { "mt-8": !SITE.showBackButton },
           ]}
           data-pagefind-body
@@ -197,10 +197,13 @@ const nextPost =
             }
           </div>
         </main>
+
         {
           headings.length > 0 && (
-            <aside class="sticky top-24 hidden h-fit w-72 flex-shrink-0 pt-4 xl:block">
-              <TableOfContents headings={headings} />
+            <aside class="absolute top-0 left-full ml-8 hidden w-72 2xl:block">
+              <div class="sticky top-24">
+                <TableOfContents headings={headings} />
+              </div>
             </aside>
           )
         }

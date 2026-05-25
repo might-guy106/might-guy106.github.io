@@ -14,7 +14,7 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #fdfdfd;
+  --background: #f5f4ed;
   --surface: #fdfdfd;
   --foreground: #282728;
   --accent: #006cac;
