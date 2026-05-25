@@ -25,14 +25,10 @@ const isActive = (path: string) => {
 };
 ---
 
-<header class="sticky top-0 z-50">
-  <a
-    id="skip-to-content"
-    href="#main-content"
-    class="absolute start-16 -top-full z-50 bg-background px-3 py-2 text-accent backdrop-blur-lg transition-all focus:top-4"
-  >
-    Skip to content
-  </a>
+<header
+  id="site-header"
+  class="sticky top-0 z-50 transition-transform duration-300 ease-out will-change-transform"
+>
   <div
     id="nav-container"
     class="mx-auto flex max-w-app flex-col items-center justify-between sm:flex-row"
@@ -156,13 +152,18 @@ const isActive = (path: string) => {
 </header>
 
 <script>
+  let headerScrollHandler: (() => void) | undefined;
+
   function toggleNav() {
-    const menuBtn = document.querySelector("#menu-btn");
-    const menuItems = document.querySelector("#menu-items");
-    const menuIcon = document.querySelector("#menu-icon");
-    const closeIcon = document.querySelector("#close-icon");
+    const menuBtn = document.querySelector<HTMLButtonElement>("#menu-btn");
+    const menuItems = document.querySelector<HTMLUListElement>("#menu-items");
+    const menuIcon = document.querySelector<HTMLElement>("#menu-icon");
+    const closeIcon = document.querySelector<HTMLElement>("#close-icon");
 
     if (!menuBtn || !menuItems || !menuIcon || !closeIcon) return;
+
+    if (menuBtn.dataset.bound === "true") return;
+    menuBtn.dataset.bound = "true";
 
     menuBtn.addEventListener("click", () => {
       const openMenu = menuBtn.getAttribute("aria-expanded") === "true";
@@ -176,8 +177,53 @@ const isActive = (path: string) => {
     });
   }
 
-  toggleNav();
+  function setupHeaderAutoHide() {
+    const header = document.querySelector<HTMLElement>("#site-header");
+    if (!header) return;
+
+    if (headerScrollHandler) {
+      window.removeEventListener("scroll", headerScrollHandler);
+    }
+
+    let lastScrollY = window.scrollY;
+    const minScrollBeforeHide = 80;
+    const minDelta = 8;
+
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      const menuIsOpen =
+        document
+          .querySelector<HTMLButtonElement>("#menu-btn")
+          ?.getAttribute("aria-expanded") === "true";
+
+      if (menuIsOpen || currentScrollY <= minScrollBeforeHide) {
+        header.classList.remove("-translate-y-full");
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      const delta = currentScrollY - lastScrollY;
+
+      if (delta > minDelta) {
+        header.classList.add("-translate-y-full");
+      } else if (delta < -minDelta) {
+        header.classList.remove("-translate-y-full");
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    headerScrollHandler = onScroll;
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  function setupHeader() {
+    toggleNav();
+    setupHeaderAutoHide();
+  }
+
+  setupHeader();
 
   // Runs on view transitions navigation
-  document.addEventListener("astro:after-swap", toggleNav);
+  document.addEventListener("astro:after-swap", setupHeader);
 </script>
