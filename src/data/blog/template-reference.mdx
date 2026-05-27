@@ -1,0 +1,171 @@
+---
+title: "MDX Blog Template Reference (Internal)"
+author: Vetcha Pankaj Nath
+pubDatetime: 2026-05-27T12:00:00Z
+description: "Internal reference post with reusable MDX syntax examples for future blog writing."
+draft: true
+tags: ["template", "mdx", "writing"]
+featured: false
+---
+
+import { Image } from "astro:assets";
+import test_image from "../../assets/images/test_image.jpeg";
+import Callout from "../../components/Callout.astro";
+
+# MDX Blog Template Reference
+
+Use this file as a copy-paste reference whenever you forget syntax.
+
+<Callout type="warning" title="Internal template">
+  This file is prefixed with <code>_</code>, so it will not be published by your current content glob.
+  Remove the prefix and set <code>draft: false</code> only when you intentionally want to publish it.
+</Callout>
+
+## 1) Frontmatter template
+
+```yaml
+---
+title: "Your Post Title"
+author: Vetcha Pankaj Nath
+pubDatetime: 2026-01-01T10:00:00Z
+description: "Short summary for cards, SEO, and social previews."
+draft: false
+tags: ["tag-1", "tag-2"]
+featured: false
+modDatetime: 2026-01-02T18:30:00Z
+canonicalURL: "https://example.com/original-post"
+hideEditPost: false
+timezone: "Asia/Kolkata"
+---
+```
+
+## 2) Text formatting
+
+Normal text, **bold**, *italic*, ***bold+italic***, ~~strikethrough~~, and `inline code`.
+
+You can also use HTML where needed: <mark>highlighted text</mark>, H<sub>2</sub>O, 10<sup>6</sup>.
+
+Current year via MDX expression: **{new Date().getFullYear()}**.
+
+## 3) Links and headings
+
+- Internal link: [Go to Notes](/notes)
+- External link: [Astro Docs](https://docs.astro.build)
+
+### H3 heading
+
+#### H4 heading
+
+## 4) Quotes, lists, tasks
+
+> Blockquote example.
+>
+> Nested quote style works too.
+
+- Unordered item
+  - Nested item
+- Another item
+
+1. Ordered item
+2. Ordered item two
+
+## 5) Tables
+
+| Feature     | Markdown | MDX |
+| :---------- | :------: | --: |
+| Headings    |    ✅     |  ✅ |
+| Components  |    ❌     |  ✅ |
+| JS Expr     |    ❌     |  ✅ |
+| HTML        |    ✅     |  ✅ |
+
+## 6) Code blocks
+
+Basic fenced code: [^1]
+[^1]: i dont know what this is
+
+```ts
+const greet = (name: string) => `Hello, ${name}!`;
+console.log(greet("Pankaj"));
+```
+
+Code block with filename label (uses your custom `file="..."` meta):
+
+```ts file="src/utils/example.ts"
+export function sum(a: number, b: number) {
+  return a + b;
+}
+```
+
+Shiki notation examples (highlight, word highlight, diff):
+
+```ts file="src/config/feature.ts"
+const apiBase = "https://old.api.dev"; // [!code --]
+const apiBase = "https://new.api.dev"; // [!code ++]
+
+const apiKey = process.env.API_KEY; // [!code word:API_KEY]
+const enableBeta = true; // [!code highlight]
+```
+
+Shell snippet:
+
+```bash file="terminal"
+pnpm install
+pnpm dev
+```
+
+## 7) Images (all common styles)
+
+### A) Markdown image
+
+![Markdown image example](../../assets/images/test_image.jpeg)
+
+### B) Astro Image component (recommended)
+
+<Image src={test_image} alt="Test image rendered through astro:assets" />
+
+### C) Plain HTML image using imported asset
+
+<img src={test_image.src} alt="Test image with plain img tag" loading="lazy" />
+
+## 8) Reusable components in MDX
+
+<Callout type="info" title="Info callout">
+  This is a reusable Astro component imported directly into MDX.This is a reusable Astro component imported directly into MDX.This is a reusable Astro component imported directly into MDX.This is a reusable Astro component imported directly into MDX.
+
+  This is a reusable Astro component imported directly into MDX.This is a reusable Astro component imported directly into MDX.This is a reusable Astro component imported directly into MDX.This is a reusable Astro component imported directly into MDX.This is a reusable Astro component imported directly into MDX.This is a reusable Astro component imported directly into MDX.This is a reusable Astro component imported directly into MDX.This is a reusable Astro component imported directly into MDX.This is a reusable Astro component imported directly into MDX.This is a reusable Astro component imported directly into MDX.
+</Callout>
+
+<Callout type="tip" title="Tip callout">
+  Prefer <code>&lt;Image /&gt;</code> for optimized local images and always provide meaningful alt text.
+</Callout>
+
+<Callout type="danger" title="Danger callout">
+  Do not leak API keys, tokens, or private URLs in blog screenshots/code snippets.
+</Callout>
+
+## 9) Raw HTML blocks
+
+<details>
+  <summary><strong>Click to expand extra notes</strong></summary>
+  <p>You can include collapsible details for optional explanations.</p>
+</details>
+
+Use keyboard key styling with HTML: press <kbd>Ctrl</kbd> + <kbd>K</kbd>.
+
+## 10) Footnotes
+
+MDX also supports footnotes in Markdown style.[^2]
+
+[^2]: This is a footnote example.
+
+---
+
+## 11) Quick publish checklist
+
+- [ ] Title is clear and searchable
+- [ ] `description` is concise and useful
+- [ ] `tags` are relevant
+- [ ] All images have good `alt` text
+- [ ] Code blocks are tested
+- [ ] No secrets/private data
+- [ ] `draft: false` before publishing

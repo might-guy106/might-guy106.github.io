@@ -1,0 +1,28 @@
+---
+interface Props {
+  type?: "info" | "tip" | "warning" | "danger";
+  title?: string;
+}
+
+const { type = "info", title } = Astro.props;
+---
+
+<aside
+  class:list={[
+    "my-6 rounded-xl border border-l-4 px-4 py-3",
+    type === "info" && "border-sky-500/40 border-l-sky-500 bg-sky-500/15",
+    type === "tip" &&
+      "border-emerald-500/40 border-l-emerald-500 bg-emerald-500/15",
+    type === "warning" &&
+      "border-amber-500/40 border-l-amber-500 bg-amber-500/15",
+    type === "danger" && "border-rose-500/40 border-l-rose-500 bg-rose-500/15",
+  ]}
+>
+  <p class="mb-2 flex items-center gap-2 font-semibold text-foreground">
+    <span>{title}</span>
+  </p>
+
+  <div class="text-foreground/90">
+    <slot />
+  </div>
+</aside>
