@@ -1,0 +1,432 @@
+<!DOCTYPE html><html dir="ltr" lang="en" class="scroll-smooth" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png"><link rel="canonical" href="https://vpankaj.com/posts/template-reference/"><meta name="generator" content="Astro v5.12.0"><!-- General Meta Tags --><title>MDX Blog Template Reference (Internal) | V Pankaj</title><meta name="title" content="MDX Blog Template Reference (Internal) | V Pankaj"><meta name="description" content="Internal reference post with reusable MDX syntax examples for future blog writing."><meta name="author" content="Vetcha Pankaj Nath"><link rel="sitemap" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:title" content="MDX Blog Template Reference (Internal) | V Pankaj"><meta property="og:description" content="Internal reference post with reusable MDX syntax examples for future blog writing."><meta property="og:url" content="https://vpankaj.com/posts/template-reference/"><meta property="og:image" content="https://vpankaj.com/posts/template-reference/index.png"><!-- Article Published/Modified time --><meta property="article:published_time" content="2026-05-27T12:00:00.000Z"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://vpankaj.com/posts/template-reference/"><meta property="twitter:title" content="MDX Blog Template Reference (Internal) | V Pankaj"><meta property="twitter:description" content="Internal reference post with reusable MDX syntax examples for future blog writing."><meta property="twitter:image" content="https://vpankaj.com/posts/template-reference/index.png"><!-- Google JSON-LD Structured data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"MDX Blog Template Reference (Internal) | V Pankaj","image":"https://vpankaj.com/posts/template-reference/index.png","datePublished":"2026-05-27T12:00:00.000Z","author":[{"@type":"Person","name":"Vetcha Pankaj Nath","url":"https://vpankaj.com/"}]}</script><!-- Enable RSS feed auto-discovery  --><!-- https://docs.astro.build/en/recipes/rss/#enabling-rss-feed-auto-discovery --><link rel="alternate" type="application/rss+xml" title="V Pankaj" href="https://vpankaj.com/rss.xml"><meta name="theme-color" content=""><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.D98dxaWf.js"></script><script src="/toggle-theme.js"></script><link rel="stylesheet" href="/_astro/about.D-uGWbqr.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+:where([data-astro-image]){object-fit:var(--fit);object-position:var(--pos);height:auto}:where([data-astro-image=full-width]){width:100%}:where([data-astro-image=constrained]){max-width:100%}
+</style><style>[data-astro-transition-scope="astro-qyrnxog5-1"] { view-transition-name: mdx-blog-template-reference-internal; }@layer astro { ::view-transition-old(mdx-blog-template-reference-internal) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(mdx-blog-template-reference-internal) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(mdx-blog-template-reference-internal) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(mdx-blog-template-reference-internal) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-qyrnxog5-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-qyrnxog5-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-qyrnxog5-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-qyrnxog5-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-qyrnxog5-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-qyrnxog5-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-qyrnxog5-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-qyrnxog5-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-2"] { view-transition-name: template; }@layer astro { ::view-transition-old(template) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(template) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(template) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(template) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-3"] { view-transition-name: mdx; }@layer astro { ::view-transition-old(mdx) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(mdx) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(mdx) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(mdx) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-4"] { view-transition-name: writing; }@layer astro { ::view-transition-old(writing) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(writing) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(writing) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(writing) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>.tabs-panels[data-astro-cid-xlvzfuxv]>:not([hidden]){display:block}
+</style></head> <body data-astro-cid-sckkx6r4>  <header id="site-header" class="sticky top-0 z-50 w-full border-b border-border bg-surface transition-transform duration-300 ease-out will-change-transform"> <div id="nav-container" class="mx-auto flex max-w-app flex-col items-center justify-between sm:flex-row"> <div id="top-nav-wrap" class="relative flex w-full items-baseline justify-between p-6 sm:items-center sm:py-2"> <a href="/" class="absolute text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> <img src="/_astro/logo.CaNTvyr0_1LSDJA.webp" srcset="/_astro/logo.CaNTvyr0_1LSDJA.webp 48w" alt="Logo" loading="lazy" decoding="async" fetchpriority="auto" sizes="(min-width: 48px) 48px, 100vw" style="--fit: cover; --pos: center;" data-astro-image="constrained" width="48" height="64" class="h-10 w-10"> </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="Open Menu" aria-expanded="false" aria-controls="menu-items"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg> </button> <ul id="menu-items" class="mt-4 grid w-44 grid-cols-2 place-content-center gap-2 [&#38;>li>a]:block [&#38;>li>a]:px-4 [&#38;>li>a]:py-3 [&#38;>li>a]:text-center [&#38;>li>a]:font-medium [&#38;>li>a]:hover:text-accent sm:[&#38;>li>a]:px-2 sm:[&#38;>li>a]:py-1 hidden sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0"> <li class="col-span-2"> <a href="/posts" class="active-nav">
+Blogs
+</a> </li> <li class="col-span-2"> <a href="/notes">
+Notes
+</a> </li> <li class="col-span-2"> <a href="/recipes">
+Recipes
+</a> </li> <li class="col-span-2"> <a href="/tags">
+Tags
+</a> </li> <li class="col-span-2"> <a href="/about">
+About
+</a> </li>  <li class="col-span-1 flex items-center justify-center"> <a href="/search" class="group inline-block hover:text-accent focus-outline flex p-3 sm:p-1" aria-label="search" title="Search"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg> <span class="sr-only">Search</span> </a> </li> <li class="col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline relative size-12 p-4 sm:size-8 hover:[&>svg]:stroke-accent" title="Toggles light & dark" aria-label="auto" aria-live="polite"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" /><path d="M6.343 17.657l-1.414 1.414" /><path d="M6.343 6.343l-1.414 -1.414" /><path d="M17.657 6.343l1.414 -1.414" /><path d="M17.657 17.657l1.414 1.414" /><path d="M4 12h-2" /><path d="M12 4v-2" /><path d="M20 12h2" /><path d="M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </div> </header> <script type="module">let l;function a(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),r=document.querySelector("#menu-icon"),o=document.querySelector("#close-icon");!e||!t||!r||!o||e.dataset.bound!=="true"&&(e.dataset.bound="true",e.addEventListener("click",()=>{const n=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",n?"false":"true"),e.setAttribute("aria-label",n?"Open Menu":"Close Menu"),t.classList.toggle("hidden"),r.classList.toggle("hidden"),o.classList.toggle("hidden")}))}function i(){const e=document.querySelector("#site-header");if(!e)return;l&&window.removeEventListener("scroll",l);let t=window.scrollY;const r=80,o=8,n=()=>{const s=window.scrollY;if(document.querySelector("#menu-btn")?.getAttribute("aria-expanded")==="true"||s<=r){e.classList.remove("-translate-y-full"),t=s;return}const c=s-t;c>o?e.classList.add("-translate-y-full"):c<-8&&e.classList.remove("-translate-y-full"),t=s};l=n,window.addEventListener("scroll",n,{passive:!0})}function u(){a(),i()}u();document.addEventListener("astro:after-swap",u);</script> <div class="bg-background py-2"> <div class="mx-auto max-w-app"> <div class="relative mx-auto max-w-5xl"> <main id="main-content" class="w-full rounded-lg border border-border bg-surface p-6 sm:px-16 sm:py-10 mt-8" data-pagefind-body> <script type="module">function o(){const t=document.querySelector("#back-button"),e=sessionStorage.getItem("backUrl");e&&t&&(t.href=e)}document.addEventListener("astro:page-load",o);o();</script> <h1 class="text-4xl font-bold text-foreground sm:text-5xl" data-astro-transition-scope="astro-qyrnxog5-1"> MDX Blog Template Reference (Internal) </h1> <div class="mt-3 mb-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-foreground/60"> <time datetime="2026-05-27T12:00:00.000Z">2026-05-27</time>  </div> <ul class="mt-2 mb-8 sm:mb-10"> <li class="group inline-block group-hover:cursor-pointer my-1 underline-offset-4"> <a href="/tags/template/" class="relative pe-2 font-mono text-lg decoration-dashed group-hover:-top-0.5 group-hover:text-accent focus-visible:p-1 focus-visible:no-underline text-sm" data-astro-transition-scope="astro-36ssibgs-2"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block opacity-80 -me-3.5 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg>
+&nbsp;<span>template</span> </a> </li><li class="group inline-block group-hover:cursor-pointer my-1 underline-offset-4"> <a href="/tags/mdx/" class="relative pe-2 font-mono text-lg decoration-dashed group-hover:-top-0.5 group-hover:text-accent focus-visible:p-1 focus-visible:no-underline text-sm" data-astro-transition-scope="astro-36ssibgs-3"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block opacity-80 -me-3.5 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg>
+&nbsp;<span>mdx</span> </a> </li><li class="group inline-block group-hover:cursor-pointer my-1 underline-offset-4"> <a href="/tags/writing/" class="relative pe-2 font-mono text-lg decoration-dashed group-hover:-top-0.5 group-hover:text-accent focus-visible:p-1 focus-visible:no-underline text-sm" data-astro-transition-scope="astro-36ssibgs-4"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block opacity-80 -me-3.5 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg>
+&nbsp;<span>writing</span> </a> </li> </ul>  <article id="article" class="app-prose mt-4 min-w-0 prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"> <h1 id="mdx-blog-template-reference">MDX Blog Template Reference</h1>
+<p>Use this file as a copy-paste reference whenever you forget syntax.</p>
+<aside class="my-6 rounded-lg border px-4 border-amber-500/40 bg-amber-500/15"> <p class="mb-2 flex items-center gap-2 font-semibold text-foreground"> <span>Internal template</span> </p> <div class="text-foreground/90"> <p>This file is prefixed with <code>_</code>, so it will not be published by your
+current content glob. Remove the prefix and set <code>draft: false</code> only
+when you intentionally want to publish it.</p> </div> </aside>
+<h2 id="1-frontmatter-template">1) Frontmatter template</h2>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627;overflow-x:auto;--file-name-offset:-0.75rem" tabindex="0" data-language="yaml"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">---</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">title</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD"> &quot;</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">Your Post Title</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">author</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D"> Vetcha Pankaj Nath</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">pubDatetime</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#24292EFF;--shiki-dark:#82AAFF"> 2026-01-01T10:00:00Z</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">description</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD"> &quot;</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">Short summary for cards, SEO, and social previews.</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">draft</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#1976D2;--shiki-dark:#FF5874"> false</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">tags</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> [</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">tag-1</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD"> &quot;</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">tag-2</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">]</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">featured</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#1976D2;--shiki-dark:#FF5874"> false</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">modDatetime</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#24292EFF;--shiki-dark:#82AAFF"> 2026-01-02T18:30:00Z</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">canonicalURL</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD"> &quot;</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">https://example.com/original-post</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">hideEditPost</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#1976D2;--shiki-dark:#FF5874"> false</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">timezone</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD"> &quot;</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">Asia/Kolkata</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">---</span></span></code></pre>
+<h2 id="2-text-formatting">2) Text formatting</h2>
+<p>Normal text, <strong>bold</strong>, <em>italic</em>, <strong><em>bold+italic</em></strong>, <del>strikethrough</del>, and <code>inline code</code>.</p>
+<p>You can also use HTML where needed: <mark>highlighted text</mark>, H<sub>2</sub>O, 10<sup>6</sup>.</p>
+<p>Current year via MDX expression: <strong>2026</strong>.</p>
+<h2 id="3-links-and-headings">3) Links and headings</h2>
+<ul>
+<li>Internal link: <a href="/notes">Go to Notes</a></li>
+<li>External link: <a href="https://docs.astro.build">Astro Docs</a></li>
+</ul>
+<h3 id="h3-heading1">H3 heading1</h3>
+<h3 id="h3-heading2">H3 heading2</h3>
+<h3 id="h3-heading3">H3 heading3</h3>
+<h3 id="h3-heading4">H3 heading4</h3>
+<p>what to do now i dont know do you have any suggestions</p>
+<h4 id="h4-heading">H4 heading</h4>
+<h2 id="4-quotes-lists-tasks">4) Quotes, lists, tasks</h2>
+<blockquote>
+<p>Blockquote example.</p>
+<p>Nested quote style works too.</p>
+</blockquote>
+<ul>
+<li>Unordered item
+<ul>
+<li>Nested item</li>
+</ul>
+</li>
+<li>Another item</li>
+</ul>
+<ol>
+<li>Ordered item</li>
+<li>Ordered item two</li>
+</ol>
+<h2 id="5-tables">5) Tables</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th style="text-align:left">Feature</th><th style="text-align:center">Markdown</th><th style="text-align:right">MDX</th></tr></thead><tbody><tr><td style="text-align:left">Headings</td><td style="text-align:center">✅</td><td style="text-align:right">✅</td></tr><tr><td style="text-align:left">Components</td><td style="text-align:center">❌</td><td style="text-align:right">✅</td></tr><tr><td style="text-align:left">JS Expr</td><td style="text-align:center">❌</td><td style="text-align:right">✅</td></tr><tr><td style="text-align:left">HTML</td><td style="text-align:center">✅</td><td style="text-align:right">✅</td></tr></tbody></table>
+<h2 id="6-code-blocks">6) Code blocks</h2>
+<p>Basic fenced code: <sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref aria-describedby="footnote-label">1</a></sup></p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627;overflow-x:auto;--file-name-offset:-0.75rem" tabindex="0" data-language="ts"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">const</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic"> greet</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA"> =</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD"> (</span><span style="--shiki-light:#24292EFF;--shiki-light-font-style:inherit;--shiki-dark:#D7DBE0;--shiki-dark-font-style:italic">name</span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">:</span><span style="--shiki-light:#1976D2;--shiki-light-font-style:inherit;--shiki-dark:#C5E478;--shiki-dark-font-style:italic"> string</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">)</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA"> =&gt;</span><span style="--shiki-light:#22863A;--shiki-dark:#D6DEEB"> `</span><span style="--shiki-light:#22863A;--shiki-light-font-style:inherit;--shiki-dark:#ECC48D;--shiki-dark-font-style:italic">Hello, </span><span style="--shiki-light:#D32F2F;--shiki-dark:#D3423E">${</span><span style="--shiki-light:#24292EFF;--shiki-light-font-style:inherit;--shiki-dark:#D6DEEB;--shiki-dark-font-style:italic">name</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D3423E">}</span><span style="--shiki-light:#22863A;--shiki-light-font-style:inherit;--shiki-dark:#ECC48D;--shiki-dark-font-style:italic">!</span><span style="--shiki-light:#22863A;--shiki-dark:#D6DEEB">`</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span></span>
+<span class="line"><span style="--shiki-light:#1976D2;--shiki-dark:#D6DEEB">console</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">.</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">log</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">greet</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">Pankaj</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">));</span></span></code></pre>
+<p>Code block with filename label (uses your custom <code>file=&quot;...&quot;</code> meta):</p>
+<pre class="astro-code astro-code-themes min-light night-owl mt-8" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627;overflow-x:auto;--file-name-offset:-0.75rem" tabindex="0" data-language="ts"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">export</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA"> function</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic"> sum</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">(</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">a</span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">:</span><span style="--shiki-light:#1976D2;--shiki-dark:#C5E478"> number</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0"> b</span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">:</span><span style="--shiki-light:#1976D2;--shiki-dark:#C5E478"> number</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> {</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">  return</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> a </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">+</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> b;</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">}</span></span></code><span class="absolute py-1 text-foreground text-xs font-medium leading-4 pl-4 pr-2 before:inline-block before:size-1 before:bg-green-500 before:rounded-full before:absolute before:top-[45%] before:left-2 left-2 top-(--file-name-offset) border rounded-md bg-background">src/utils/example.ts</span></pre>
+<p>Shiki notation examples (highlight, word highlight, diff):</p>
+<pre class="astro-code astro-code-themes min-light night-owl has-highlighted has-diff mt-8" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627;overflow-x:auto;--file-name-offset:-0.75rem" tabindex="0" data-language="ts"><code><span class="line diff remove"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">const</span><span style="--shiki-light:#1976D2;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic"> apiBase</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA"> =</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD"> &quot;</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">https://old.api.dev</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">; </span></span>
+<span class="line diff add"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">const</span><span style="--shiki-light:#1976D2;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic"> apiBase</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA"> =</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD"> &quot;</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">https://new.api.dev</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">; </span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">const</span><span style="--shiki-light:#1976D2;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic"> apiKey</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA"> =</span><span style="--shiki-light:#1976D2;--shiki-light-font-style:inherit;--shiki-dark:#D6DEEB;--shiki-dark-font-style:italic"> process</span><span style="--shiki-light:#24292EFF;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">.</span><span style="--shiki-light:#1976D2;--shiki-light-font-style:inherit;--shiki-dark:#FAF39F;--shiki-dark-font-style:italic">env</span><span style="--shiki-light:#24292EFF;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">.</span><span style="--shiki-light:#1976D2;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic" class="highlighted-word">API_KEY</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">; </span></span>
+<span class="line highlighted"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">const</span><span style="--shiki-light:#1976D2;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic"> enableBeta</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA"> =</span><span style="--shiki-light:#1976D2;--shiki-light-font-style:inherit;--shiki-dark:#FF5874;--shiki-dark-font-style:italic"> true</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">; </span></span></code><span class="absolute py-1 text-foreground text-xs font-medium leading-4 pl-4 pr-2 before:inline-block before:size-1 before:bg-green-500 before:rounded-full before:absolute before:top-[45%] before:left-2 left-2 top-(--file-name-offset) border rounded-md bg-background">src/config/feature.ts</span></pre>
+<p>Shell snippet:</p>
+<pre class="astro-code astro-code-themes min-light night-owl mt-8" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627;overflow-x:auto;--file-name-offset:-0.75rem" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">pnpm</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> install</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">pnpm</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> dev</span></span></code><span class="absolute py-1 text-foreground text-xs font-medium leading-4 pl-4 pr-2 before:inline-block before:size-1 before:bg-green-500 before:rounded-full before:absolute before:top-[45%] before:left-2 left-2 top-(--file-name-offset) border rounded-md bg-background">terminal</span></pre>
+<h2 id="7-images-all-common-styles">7) Images (all common styles)</h2>
+<h3 id="a-markdown-image">A) Markdown image</h3>
+<p><img src="/_astro/test_image.BJLG5X_Q_Zki2dK.webp" srcset="/_astro/test_image.BJLG5X_Q_Zki2dK.webp 275w" alt="Markdown image example" loading="lazy" decoding="async" fetchpriority="auto" sizes="(min-width: 275px) 275px, 100vw" style="--fit: cover; --pos: center;" data-astro-image="constrained" width="275" height="183"></p>
+<h3 id="b-astro-image-component-recommended">B) Astro Image component (recommended)</h3>
+<img src="/_astro/test_image.BJLG5X_Q_Zki2dK.webp" srcset="/_astro/test_image.BJLG5X_Q_Zki2dK.webp 275w" alt="Test image rendered through astro:assets" loading="lazy" decoding="async" fetchpriority="auto" sizes="(min-width: 275px) 275px, 100vw" style="--fit: cover; --pos: center;" data-astro-image="constrained" width="275" height="183">
+<h3 id="c-plain-html-image-using-imported-asset">C) Plain HTML image using imported asset</h3>
+<img src="/_astro/test_image.BJLG5X_Q.jpeg" alt="Test image with plain img tag" loading="lazy"/>
+<h2 id="8-reusable-components-in-mdx">8) Reusable components in MDX</h2>
+<h3 id="callout">Callout</h3>
+<aside class="my-6 rounded-lg border px-4 border-sky-500/40 bg-sky-500/15"> <p class="mb-2 flex items-center gap-2 font-semibold text-foreground"> <span>Info callout</span> </p> <div class="text-foreground/90"> <p>General information or context.</p> </div> </aside>
+<aside class="my-6 rounded-lg border px-4 border-emerald-500/40 bg-emerald-500/15"> <p class="mb-2 flex items-center gap-2 font-semibold text-foreground"> <span>Tip callout</span> </p> <div class="text-foreground/90"> <p>Best-practice recommendation or productivity trick.</p> </div> </aside>
+<aside class="my-6 rounded-lg border px-4 border-amber-500/40 bg-amber-500/15"> <p class="mb-2 flex items-center gap-2 font-semibold text-foreground"> <span>Warning callout</span> </p> <div class="text-foreground/90"> <p>Watch out for this — potential footgun or common mistake.</p> </div> </aside>
+<aside class="my-6 rounded-lg border px-4 border-rose-500/40 bg-rose-500/15"> <p class="mb-2 flex items-center gap-2 font-semibold text-foreground"> <span>Danger callout</span> </p> <div class="text-foreground/90"> <p>Critical: don’t do this. Data loss, security issue, or irreversible
+action.</p> </div> </aside>
+<h3 id="definition">Definition</h3>
+<dl class="my-6 rounded-lg border border-border bg-surface px-4"> <dt class="mb-1.5 font-semibold text-accent">Bloom Filter</dt> <dd class="text-foreground/85"> <p>A space-efficient probabilistic data structure used to test whether an element
+is a member of a set. False positives are possible, but false negatives are
+not.</p> </dd> </dl>
+<h3 id="accordion-collapsible-section">Accordion (collapsible section)</h3>
+<details class="accordion group my-4 rounded-lg border border-border" id="acc-zslee2"> <summary class="flex cursor-pointer items-center gap-2 px-4 py-3 font-medium text-foreground transition-colors select-none marker:content-none hover:text-accent"> <svg class="accordion-chevron size-4 flex-shrink-0 text-foreground/50 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="m9 18 6-6-6-6"></path> </svg> <span>Click to see the answer</span> </summary> <div class="accordion-content px-4 pt-0 pb-4 text-foreground/85"> <p>This content is hidden by default. Great for FAQs, long outputs, or
+supplementary details that would otherwise clutter the page.</p> </div> </details>
+<details class="accordion group my-4 rounded-lg border border-border" id="acc-ow4yun" open> <summary class="flex cursor-pointer items-center gap-2 px-4 py-3 font-medium text-foreground transition-colors select-none marker:content-none hover:text-accent"> <svg class="accordion-chevron size-4 flex-shrink-0 text-foreground/50 transition-transform duration-200 group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="m9 18 6-6-6-6"></path> </svg> <span>Already expanded</span> </summary> <div class="accordion-content px-4 pt-0 pb-4 text-foreground/85"> <p>This one starts open. Set </p><code><p>open={true}</p></code> <p>to show content by default.</p> </div> </details>
+<h3 id="badge-inline-label">Badge (inline label)</h3>
+<p><p>Status: <span class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium not-prose bg-amber-500/15 text-amber-600 dark:text-amber-400"> Draft </span> </p><span class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium not-prose bg-emerald-500/15 text-emerald-600 dark:text-emerald-400"> Published </span> <span class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium not-prose bg-rose-500/15 text-rose-600 dark:text-rose-400"> Deprecated </span> <span class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium not-prose bg-sky-500/15 text-sky-600 dark:text-sky-400"> Rust </span><span class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium not-prose bg-accent/15 text-accent"> v2.0 </span> <span class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium not-prose bg-muted/70 text-foreground/70"> Notes </span></p>
+<h3 id="tabs-languagecode-switcher">Tabs (language/code switcher)</h3>
+<div class="tabs-group not-prose my-6" id="tabs-nz5qa7" data-astro-cid-xlvzfuxv> <!-- Tab buttons --> <div class="tabs-header -mb-px flex border-b border-border" role="tablist" data-astro-cid-xlvzfuxv> <button type="button" role="tab" aria-selected="true" aria-controls="tabs-nz5qa7-panel-rust" id="tabs-nz5qa7-tab-rust" class="tabs-btn rounded-t-md border border-b-0 px-4 py-2 text-sm font-medium transition-colors duration-150 border-border bg-surface text-accent" data-tab="rust" data-astro-cid-xlvzfuxv> Rust </button><button type="button" role="tab" aria-selected="false" aria-controls="tabs-nz5qa7-panel-python" id="tabs-nz5qa7-tab-python" class="tabs-btn rounded-t-md border border-b-0 px-4 py-2 text-sm font-medium transition-colors duration-150 border-transparent text-foreground/60 hover:border-border hover:text-foreground" data-tab="python" data-astro-cid-xlvzfuxv> Python </button><button type="button" role="tab" aria-selected="false" aria-controls="tabs-nz5qa7-panel-shell" id="tabs-nz5qa7-tab-shell" class="tabs-btn rounded-t-md border border-b-0 px-4 py-2 text-sm font-medium transition-colors duration-150 border-transparent text-foreground/60 hover:border-border hover:text-foreground" data-tab="shell" data-astro-cid-xlvzfuxv> Shell </button> </div> <!-- Tab panels (each child must have data-tab="your-id" matching one of the tab IDs above) --> <div class="tabs-panels rounded-b-md border border-border bg-surface p-4" data-astro-cid-xlvzfuxv> <div data-tab="rust"><pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627;overflow-x:auto;--file-name-offset:-0.75rem" tabindex="0" data-language="rust"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">fn</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic"> main</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">() {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    println!</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">Hello from Rust!</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">);</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">}</span></span></code></pre></div><div data-tab="python"><pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627;overflow-x:auto;--file-name-offset:-0.75rem" tabindex="0" data-language="python"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">def</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic"> main</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">()</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">:</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#C5E478">    print</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">(</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">Hello from Python!</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">)</span></span></code></pre></div><div data-tab="shell"><pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627;overflow-x:auto;--file-name-offset:-0.75rem" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#C5E478;--shiki-dark-font-style:italic">echo</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD"> &quot;</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">Hello from shell!</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">&quot;</span></span></code></pre></div> </div> </div> <script type="module">function n(a){const o=a.querySelectorAll("[data-tab]"),s=a.querySelector(".tabs-panels");if(!s)return;const r=Array.from(s.children).filter(e=>e instanceof HTMLElement&&e.dataset.tab);if(r.length===0)return;function c(e){o.forEach(t=>{const d=t.dataset.tab===e;t.setAttribute("aria-selected",String(d)),d?(t.classList.add("border-border","bg-surface","text-accent"),t.classList.remove("border-transparent","text-foreground/60","hover:text-foreground","hover:border-border")):(t.classList.remove("border-border","bg-surface","text-accent"),t.classList.add("border-transparent","text-foreground/60","hover:text-foreground","hover:border-border"))}),r.forEach(t=>{t.hidden=t.dataset.tab!==e})}o.forEach(e=>{e.addEventListener("click",()=>{e.dataset.tab&&c(e.dataset.tab)})}),c(r[0].dataset.tab??"")}document.querySelectorAll(".tabs-group").forEach(n);document.addEventListener("astro:after-swap",()=>{document.querySelectorAll(".tabs-group").forEach(n)});</script> 
+<h3 id="videoembed">VideoEmbed</h3>
+<div class="video-embed not-prose my-6"> <div class="relative w-full overflow-hidden rounded-lg border border-border" style="padding-bottom: 56.25%"> <iframe class="absolute top-0 left-0 h-full w-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Example YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe> </div> </div>
+<h2 id="9-footnotes">9) Footnotes</h2>
+<p>MDX also supports footnotes in Markdown style.[^2]</p>
+<hr/>
+<h2 id="10-quick-publish-checklist">10) Quick publish checklist</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Title is clear and searchable</li>
+<li class="task-list-item"><input type="checkbox" disabled/> <code>description</code> is concise and useful</li>
+<li class="task-list-item"><input type="checkbox" disabled/> <code>tags</code> are relevant</li>
+<li class="task-list-item"><input type="checkbox" disabled/> All images have good <code>alt</code> text</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Code blocks are tested</li>
+<li class="task-list-item"><input type="checkbox" disabled/> No secrets/private data</li>
+<li class="task-list-item"><input type="checkbox" disabled/> <code>draft: false</code> before publishing</li>
+</ul>
+<section data-footnotes class="footnotes"><h2 class="sr-only" id="footnote-label">Footnotes</h2>
+<ol>
+<li id="user-content-fn-1">
+<p>i dont know what this is <a href="#user-content-fnref-1" data-footnote-backref aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section> </article> <!-- Previous / Share / Next --> <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-3 sm:items-start"> <div class="sm:justify-self-start">  </div> <div class="sm:justify-self-center"> <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">Share this post on:</span><div class="mx-auto text-center"><a href="https://wa.me/?text=https://vpankaj.com/posts/template-reference/" class="group inline-block hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1" title="Share this post via WhatsApp"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg><span class="sr-only">Share this post via WhatsApp</span></a><a href="https://x.com/intent/post?url=https://vpankaj.com/posts/template-reference/" class="group inline-block hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1" title="Share this post on X"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg><span class="sr-only">Share this post on X</span></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https://vpankaj.com/posts/template-reference/" class="group inline-block hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1" title="Share this post on LinkedIn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg><span class="sr-only">Share this post on LinkedIn</span></a></div></div> </div> <div class="sm:justify-self-end"> <a href="/posts/birthday-wisher" class="flex w-full justify-end gap-1 text-end hover:opacity-75"> <div> <span>Next Post</span> <div class="text-sm text-accent/85">Birthday Wisher</div> </div> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg> </a> </div> </div> </main> <aside class="fixed top-24 left-[calc(50%+34rem)] hidden max-h-[calc(100vh-7rem)] w-72 overflow-y-auto pr-2 2xl:block"> <nav class="toc"> <ul class="text-sm leading-7 font-semibold text-foreground/70"> <li class="my-0.5"> <a href="#1-frontmatter-template" class="block truncate transition-colors duration-200 hover:text-foreground" title="1) Frontmatter template"> 1) Frontmatter template </a> </li><li class="my-0.5"> <a href="#2-text-formatting" class="block truncate transition-colors duration-200 hover:text-foreground" title="2) Text formatting"> 2) Text formatting </a> </li><li class="my-0.5"> <a href="#3-links-and-headings" class="block truncate transition-colors duration-200 hover:text-foreground" title="3) Links and headings"> 3) Links and headings </a> </li><li class="my-0.5"> <a href="#4-quotes-lists-tasks" class="block truncate transition-colors duration-200 hover:text-foreground" title="4) Quotes, lists, tasks"> 4) Quotes, lists, tasks </a> </li><li class="my-0.5"> <a href="#5-tables" class="block truncate transition-colors duration-200 hover:text-foreground" title="5) Tables"> 5) Tables </a> </li><li class="my-0.5"> <a href="#6-code-blocks" class="block truncate transition-colors duration-200 hover:text-foreground" title="6) Code blocks"> 6) Code blocks </a> </li><li class="my-0.5"> <a href="#7-images-all-common-styles" class="block truncate transition-colors duration-200 hover:text-foreground" title="7) Images (all common styles)"> 7) Images (all common styles) </a> </li><li class="my-0.5"> <a href="#8-reusable-components-in-mdx" class="block truncate transition-colors duration-200 hover:text-foreground" title="8) Reusable components in MDX"> 8) Reusable components in MDX </a> </li><li class="my-0.5"> <a href="#9-footnotes" class="block truncate transition-colors duration-200 hover:text-foreground" title="9) Footnotes"> 9) Footnotes </a> </li><li class="my-0.5"> <a href="#10-quick-publish-checklist" class="block truncate transition-colors duration-200 hover:text-foreground" title="10) Quick publish checklist"> 10) Quick publish checklist </a> </li><li class="my-0.5"> <a href="#footnote-label" class="block truncate transition-colors duration-200 hover:text-foreground" title="Footnotes"> Footnotes </a> </li> </ul> </nav> </aside> </div> </div> </div>   </body></html> <script data-astro-rerun>
+  /** Create a progress indicator
+   *  at the top */
+  function createProgressBar() {
+    // Create the main container div
+    const progressContainer = document.createElement("div");
+    progressContainer.className =
+      "progress-container fixed bottom-0 z-10 h-1 w-full bg-background";
+
+    // Create the progress bar div
+    const progressBar = document.createElement("div");
+    progressBar.className = "progress-bar h-1 w-0 bg-accent";
+    progressBar.id = "myBar";
+
+    // Append the progress bar to the progress container
+    progressContainer.appendChild(progressBar);
+
+    // Append the progress container to the document body or any other desired parent element
+    document.body.appendChild(progressContainer);
+  }
+  createProgressBar();
+
+  /** Update the progress bar
+   *  when user scrolls */
+  function updateScrollProgress() {
+    document.addEventListener("scroll", () => {
+      const winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      if (document) {
+        const myBar = document.getElementById("myBar");
+        if (myBar) {
+          myBar.style.width = scrolled + "%";
+        }
+      }
+    });
+  }
+  updateScrollProgress();
+
+  /** Attaches links to headings in the document,
+   *  allowing sharing of sections easily */
+  function addHeadingLinks() {
+    const headings = Array.from(
+      document.querySelectorAll("h2, h3, h4, h5, h6")
+    );
+    for (const heading of headings) {
+      heading.classList.add("group");
+      const link = document.createElement("a");
+      link.className =
+        "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
+      link.href = "#" + heading.id;
+
+      const span = document.createElement("span");
+      span.ariaHidden = "true";
+      span.innerText = "#";
+      link.appendChild(span);
+      heading.appendChild(link);
+    }
+  }
+  addHeadingLinks();
+
+  /** Attaches copy buttons to code blocks in the document,
+   * allowing users to copy code easily. */
+  function attachCopyButtons() {
+    const copyButtonLabel = "Copy";
+    const codeBlocks = Array.from(document.querySelectorAll("pre"));
+
+    for (const codeBlock of codeBlocks) {
+      const wrapper = document.createElement("div");
+      wrapper.style.position = "relative";
+
+      // Check if --file-name-offset custom property exists
+      const computedStyle = getComputedStyle(codeBlock);
+      const hasFileNameOffset =
+        computedStyle.getPropertyValue("--file-name-offset").trim() !== "";
+
+      // Determine the top positioning class
+      const topClass = hasFileNameOffset
+        ? "top-(--file-name-offset)"
+        : "-top-3";
+
+      const copyButton = document.createElement("button");
+      copyButton.className = `copy-code absolute end-3 ${topClass} rounded bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium`;
+      copyButton.innerHTML = copyButtonLabel;
+      codeBlock.setAttribute("tabindex", "0");
+      codeBlock.appendChild(copyButton);
+
+      // wrap codebock with relative parent element
+      codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
+      wrapper.appendChild(codeBlock);
+
+      copyButton.addEventListener("click", async () => {
+        await copyCode(codeBlock, copyButton);
+      });
+    }
+
+    async function copyCode(block, button) {
+      const code = block.querySelector("code");
+      const text = code?.innerText;
+
+      await navigator.clipboard.writeText(text ?? "");
+
+      // visual feedback that task is completed
+      button.innerText = "Copied";
+
+      setTimeout(() => {
+        button.innerText = copyButtonLabel;
+      }, 700);
+    }
+  }
+  attachCopyButtons();
+
+  /* Go to page start after page swap */
+  document.addEventListener("astro:after-swap", () =>
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" })
+  );
+</script>
