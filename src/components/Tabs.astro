@@ -1,0 +1,99 @@
+---
+interface Props {
+  /** Tab labels in order (e.g., ["Rust", "Python", "Go"]) */
+  tabs: string[];
+  /** Default active tab (0-based index) */
+  defaultTab?: number;
+}
+
+const { tabs, defaultTab = 0 } = Astro.props;
+
+// Normalize tab labels → safe IDs
+const tabIds = tabs.map(t => t.toLowerCase().replace(/\s+/g, "-"));
+const uniqueId = `tabs-${Math.random().toString(36).slice(2, 8)}`;
+---
+
+<div class="tabs-group my-6 not-prose" id={uniqueId}>
+  <!-- Tab buttons -->
+  <div class="tabs-header -mb-px flex border-b border-border" role="tablist">
+    {tabs.map((tab, i) => (
+      <button
+        type="button"
+        role="tab"
+        aria-selected={i === defaultTab ? "true" : "false"}
+        aria-controls={`${uniqueId}-panel-${tabIds[i]}`}
+        id={`${uniqueId}-tab-${tabIds[i]}`}
+        class:list={[
+          "tabs-btn rounded-t-md px-4 py-2 text-sm font-medium transition-colors duration-150 border border-b-0",
+          i === defaultTab
+            ? "border-border bg-surface text-accent"
+            : "border-transparent text-foreground/60 hover:text-foreground hover:border-border",
+        ]}
+        data-tab={tabIds[i]}
+      >
+        {tab}
+      </button>
+    ))}
+  </div>
+
+  <!-- Tab panels (each child must have data-tab="your-id" matching one of the tab IDs above) -->
+  <div class="tabs-panels rounded-b-md border border-border bg-surface p-4">
+    <slot />
+  </div>
+</div>
+
+<script>
+  function setupTabs(root: HTMLElement) {
+    const buttons = root.querySelectorAll<HTMLButtonElement>("[data-tab]");
+    const panelsContainer = root.querySelector<HTMLElement>(".tabs-panels");
+    if (!panelsContainer) return;
+
+    // Get all direct children with data-tab
+    const panels = Array.from(panelsContainer.children).filter(
+      el => el instanceof HTMLElement && el.dataset.tab
+    ) as HTMLElement[];
+
+    if (panels.length === 0) return;
+
+    function activate(targetId: string) {
+      buttons.forEach(btn => {
+        const isActive = btn.dataset.tab === targetId;
+        btn.setAttribute("aria-selected", String(isActive));
+        if (isActive) {
+          btn.classList.add("border-border", "bg-surface", "text-accent");
+          btn.classList.remove("border-transparent", "text-foreground/60",
+            "hover:text-foreground", "hover:border-border");
+        } else {
+          btn.classList.remove("border-border", "bg-surface", "text-accent");
+          btn.classList.add("border-transparent", "text-foreground/60",
+            "hover:text-foreground", "hover:border-border");
+        }
+      });
+
+      panels.forEach(panel => {
+        panel.hidden = panel.dataset.tab !== targetId;
+      });
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        if (btn.dataset.tab) activate(btn.dataset.tab);
+      });
+    });
+
+    // Show first tab initially
+    activate(panels[0].dataset.tab ?? "");
+  }
+
+  // Init all tab groups
+  document.querySelectorAll<HTMLElement>(".tabs-group").forEach(setupTabs);
+  document.addEventListener("astro:after-swap", () => {
+    document.querySelectorAll<HTMLElement>(".tabs-group").forEach(setupTabs);
+  });
+</script>
+
+<style>
+  .tabs-panels > :global(:not([hidden])) {
+    display: block;
+  }
+</style>

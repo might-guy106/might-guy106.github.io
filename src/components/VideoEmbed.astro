@@ -1,0 +1,33 @@
+---
+export type VideoPlatform = "youtube" | "vimeo";
+
+interface Props {
+  /** Video ID (e.g., "dQw4w9WgXcQ" for YouTube, "76979871" for Vimeo) */
+  videoId: string;
+  /** Platform */
+  platform?: VideoPlatform;
+  /** Optional title for accessibility */
+  title?: string;
+}
+
+const { videoId, platform = "youtube", title = "Embedded video" } = Astro.props;
+
+const src =
+  platform === "youtube"
+    ? `https://www.youtube-nocookie.com/embed/${videoId}`
+    : `https://player.vimeo.com/video/${videoId}`;
+---
+
+<div class="video-embed my-6 not-prose">
+  <div class="relative w-full overflow-hidden rounded-lg border border-border" style="padding-bottom: 56.25%">
+    <iframe
+      class="absolute top-0 left-0 h-full w-full"
+      src={src}
+      title={title}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    >
+    </iframe>
+  </div>
+</div>

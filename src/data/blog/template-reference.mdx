@@ -3,7 +3,7 @@ title: "MDX Blog Template Reference (Internal)"
 author: Vetcha Pankaj Nath
 pubDatetime: 2026-05-27T12:00:00Z
 description: "Internal reference post with reusable MDX syntax examples for future blog writing."
-draft: true
+draft: false
 tags: ["template", "mdx", "writing"]
 featured: false
 ---
@@ -11,6 +11,11 @@ featured: false
 import { Image } from "astro:assets";
 import test_image from "../../assets/images/test_image.jpeg";
 import Callout from "../../components/Callout.astro";
+import Definition from "../../components/Definition.astro";
+import Tabs from "../../components/Tabs.astro";
+import Accordion from "../../components/Accordion.astro";
+import Badge from "../../components/Badge.astro";
+import VideoEmbed from "../../components/VideoEmbed.astro";
 
 # MDX Blog Template Reference
 
@@ -134,31 +139,103 @@ pnpm dev
 
 ## 8) Reusable components in MDX
 
+### Callout
+
 <Callout type="info" title="Info callout">
-  This is a reusable Astro component imported directly into MDX.
+  General information or context.
 </Callout>
 
 <Callout type="tip" title="Tip callout">
-  Prefer <code>&lt;Image /&gt;</code> for optimized local images and always provide meaningful alt text.
+  Best-practice recommendation or productivity trick.
+</Callout>
+
+<Callout type="warning" title="Warning callout">
+  Watch out for this — potential footgun or common mistake.
 </Callout>
 
 <Callout type="danger" title="Danger callout">
-  Do not leak API keys, tokens, or private URLs in blog screenshots/code snippets.
+  Critical: don&apos;t do this. Data loss, security issue, or irreversible action.
 </Callout>
 
-## 9) Raw HTML blocks
+### Definition
 
-<details>
-  <summary><strong>Click to expand extra notes</strong></summary>
-  <p>You can include collapsible details for optional explanations.</p>
-</details>
+<Definition term="Bloom Filter">
+  A space-efficient probabilistic data structure used to test whether an element
+  is a member of a set. False positives are possible, but false negatives are not.
+</Definition>
 
-Use keyboard key styling with HTML: press <kbd>Ctrl</kbd> + <kbd>K</kbd>.
+### Accordion (collapsible section)
 
-## 10) Footnotes
+<Accordion title="Click to see the answer">
+  This content is hidden by default. Great for FAQs, long outputs,
+  or supplementary details that would otherwise clutter the page.
+</Accordion>
+
+<Accordion title="Already expanded" open={true}>
+  This one starts open. Set <code>open={'{'}true{'}'}</code> to show content by default.
+</Accordion>
+
+### Badge (inline label)
+
+<p>
+  Status: <Badge text="Draft" variant="warning" />{" "}
+  <Badge text="Published" variant="success" />{" "}
+  <Badge text="Deprecated" variant="danger" />{" "}
+  <Badge text="Rust" variant="info" />{" "}
+  <Badge text="v2.0" variant="accent" />{" "}
+  <Badge text="Notes" variant="default" />
+</p>
+
+### Tabs (language/code switcher)
+
+<Tabs tabs={["Rust", "Python", "Shell"]}>
+  <div data-tab="rust">
+
+  ```rust
+  fn main() {
+      println!("Hello from Rust!");
+  }
+  ```
+
+  </div>
+  <div data-tab="python">
+
+  ```python
+  def main():
+      print("Hello from Python!")
+  ```
+
+  </div>
+  <div data-tab="shell">
+
+  ```bash
+  echo "Hello from shell!"
+  ```
+
+  </div>
+</Tabs>
+
+### VideoEmbed
+
+<VideoEmbed
+  videoId="dQw4w9WgXcQ"
+  platform="youtube"
+  title="Example YouTube video"
+/>
+
+
+## 9) Footnotes
 
 MDX also supports footnotes in Markdown style.[^2]
 
-[^2]: This is a footnote example.
-
 ---
+
+## 10) Quick publish checklist
+
+- [ ] Title is clear and searchable
+- [ ] `description` is concise and useful
+- [ ] `tags` are relevant
+- [ ] All images have good `alt` text
+- [ ] Code blocks are tested
+- [ ] No secrets/private data
+- [ ] `draft: false` before publishing

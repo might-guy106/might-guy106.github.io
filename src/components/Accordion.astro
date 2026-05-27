@@ -1,0 +1,34 @@
+---
+interface Props {
+  /** Heading text shown in the clickable summary row */
+  title: string;
+  /** Start expanded (default: false) */
+  open?: boolean;
+}
+
+const { title, open = false } = Astro.props;
+const uid = `acc-${Math.random().toString(36).slice(2, 8)}`;
+---
+
+<details class="accordion my-4 group rounded-lg border border-border" id={uid} open={open}>
+  <summary
+    class="flex cursor-pointer select-none items-center gap-2 px-4 py-3 font-medium text-foreground transition-colors hover:text-accent marker:content-none"
+  >
+    <svg
+      class="accordion-chevron size-4 flex-shrink-0 text-foreground/50 transition-transform duration-200 group-open:rotate-90"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="m9 18 6-6-6-6" />
+    </svg>
+    <span>{title}</span>
+  </summary>
+  <div class="accordion-content px-4 pb-4 pt-0 text-foreground/85">
+    <slot />
+  </div>
+</details>

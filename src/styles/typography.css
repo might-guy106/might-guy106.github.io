@@ -24,7 +24,7 @@
     figcaption,
     table,
     code {
-      @apply text-foreground;
+      @apply my-4 text-foreground;
     }
 
     a {

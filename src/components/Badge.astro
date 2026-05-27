@@ -1,0 +1,26 @@
+---
+export type BadgeVariant = "default" | "success" | "warning" | "danger" | "info" | "accent";
+
+interface Props {
+  /** Visible label text */
+  text: string;
+  /** Color variant */
+  variant?: BadgeVariant;
+}
+
+const { text, variant = "default" } = Astro.props;
+---
+
+<span
+  class:list={[
+    "inline-flex items-center px-2.5 py-0.5 text-xs font-medium not-prose",
+    variant === "default" && "bg-muted/70 text-foreground/70",
+    variant === "success" && "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400",
+    variant === "warning" && "bg-amber-500/15 text-amber-600 dark:text-amber-400",
+    variant === "danger" && "bg-rose-500/15 text-rose-600 dark:text-rose-400",
+    variant === "info" && "bg-sky-500/15 text-sky-600 dark:text-sky-400",
+    variant === "accent" && "bg-accent/15 text-accent",
+  ]}
+>
+  {text}
+</span>
