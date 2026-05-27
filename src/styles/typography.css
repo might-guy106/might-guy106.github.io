@@ -10,7 +10,7 @@
     h3,
     h4,
     th {
-      @apply mb-2 text-foreground;
+      @apply mt-8 mb-2 text-foreground;
     }
 
     h3 {

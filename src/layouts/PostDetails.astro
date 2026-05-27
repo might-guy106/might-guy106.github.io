@@ -40,6 +40,7 @@ const {
 } = post.data;
 
 const { Content, headings } = await render(post);
+const tocHeadings = headings.filter(heading => heading.depth === 2);
 
 let ogImageUrl: string | undefined;
 
@@ -192,11 +193,9 @@ const nextPost =
         </main>
 
         {
-          headings.length > 0 && (
-            <aside class="absolute top-0 left-full ml-8 hidden w-72 2xl:block">
-              <div class="sticky top-24">
-                <TableOfContents headings={headings} />
-              </div>
+          tocHeadings.length > 0 && (
+            <aside class="fixed top-24 left-[calc(50%+34rem)] hidden max-h-[calc(100vh-7rem)] w-72 overflow-y-auto pr-2 2xl:block">
+              <TableOfContents headings={tocHeadings} />
             </aside>
           )
         }
