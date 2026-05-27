@@ -31,12 +31,21 @@
       @apply break-words text-foreground decoration-dashed underline-offset-4 hover:text-accent focus-visible:no-underline;
     }
 
-    ul {
+    ul,
+    ol {
       @apply overflow-x-clip;
     }
 
     li {
       @apply marker:text-accent;
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
+      line-height: 1.55;
+    }
+
+    li > p {
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
     }
 
     hr {
@@ -79,11 +88,15 @@
     }
 
     details {
-      @apply inline-block cursor-pointer text-foreground select-none [&_p]:hidden [&_ul]:!my-0;
+      @apply block text-foreground;
+    }
+
+    details > :not(summary) {
+      margin-top: 0.75rem;
     }
 
     summary {
-      @apply focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent focus-visible:outline-dashed;
+      @apply cursor-pointer select-none focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent focus-visible:outline-dashed;
     }
 
     pre {
