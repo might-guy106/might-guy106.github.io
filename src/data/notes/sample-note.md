@@ -48,4 +48,6 @@ async function checkBirthdaysAndSend(sock) {
 
 In this note, we explore Bloom filters end-to-end, from fundamental concepts to advanced variants like counting and deletable Bloom filters, the nuances of hash functions, and real-world benchmarks and use-cases.
 
+![Bloom Filter](../../assets/images/test_image.jpeg)
+
 [Add more content here as you write your notes]
